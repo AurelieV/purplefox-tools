@@ -1,16 +1,44 @@
 {
-  "name": "purplefox-tools",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.2.16"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
-    "vite": "^2.6.4"
-  }
+    "name": "purplefox-tools",
+    "files": [
+        "dist"
+    ],
+    "version": "1.0.0",
+    "main": "./dist/purplefox-tools.umd.js",
+    "module": "./dist/purplefox-tools.es.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/purplefox-tools.es.js",
+            "require": "./dist/purplefox-tools.umd.js"
+        },
+        "./style.css": {
+            "import": "./dist/style.css"
+        }
+    },
+    "devDependencies": {
+        "@iconify/vue": "^3.0.0",
+        "@vitejs/plugin-vue": "^1.9.3",
+        "vite": "^2.6.4",
+        "vue": "^3.2.16",
+        "eslint": "^8.0.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-vue": "^7.20.0",
+        "autoprefixer": "^10.3.7",
+        "postcss": "^8.3.11",
+        "postcss-import": "^14.0.2",
+        "prettier": "2.4.1",
+        "tailwindcss": "^2.2.17"
+    },
+    "dependencies": {
+        "uuid": "^8.3.2"
+    },
+    "peerDependencies": {
+        "@iconify/vue": "^3.0.0",
+        "vue": "^3.2.16"
+    }
 }
