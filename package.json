@@ -3,7 +3,7 @@
     "files": [
         "dist"
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "./dist/purplefox-tools.umd.js",
     "module": "./dist/purplefox-tools.es.js",
     "scripts": {

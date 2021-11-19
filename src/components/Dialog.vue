@@ -1,6 +1,6 @@
 <template>
     <teleport to="body">
-        <div class="absolute inset-0 bg-gray-200" @click="$emit('close')">
+        <div class="fixed inset-0 bg-gray-200" @click="$emit('close')">
             <div class="p-2 m-auto mt-2 bg-white rounded-md shadow-md sm:mt-4 top-2 pf-dialog" @click.stop>
                 <div class="flex items-start">
                     <div class="flex-1 overflow-hidden title overflow-ellipsis">{{ title }}</div>

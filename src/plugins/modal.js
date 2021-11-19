@@ -23,6 +23,7 @@ export function useModal(id) {
 
     return {
         isOpened,
+        isOpen: isOpened,
         open() {
             const query = { ...route.query, [id]: "open" };
             router.push({ query });
