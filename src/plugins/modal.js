@@ -27,10 +27,19 @@ export function useModal(id) {
             const query = { ...route.query, [id]: "open" };
             router.push({ query });
         },
-        close() {
+        async close() {
+            const hasChanged = new Promise((resolve) => {
+                const unsubscribe = watch(isOpened, (val) => {
+                    if (!val) {
+                        resolve();
+                        unsubscribe();
+                    }
+                });
+            });
             const query = { ...route.query };
             delete query[id];
             router.replace({ query });
+            return hasChanged;
         },
     };
 }
