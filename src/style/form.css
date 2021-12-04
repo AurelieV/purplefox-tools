@@ -1,0 +1,6 @@
+.pf-input {
+    @apply border-purple border-2 px-2 py-3 placeholder-gray-300 rounded;
+}
+.pf-label {
+    @apply text-purple font-semibold;
+}

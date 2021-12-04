@@ -1,0 +1,4 @@
+body {
+    @apply bg-gray-100 text-gray-900 text-base;
+    font-family: "Raleway", sans-serif;
+}

@@ -1,0 +1,5 @@
+.pf-list-enter-from,
+.pf-list-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
+}

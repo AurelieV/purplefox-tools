@@ -4,7 +4,7 @@
         "dist",
         "tailwind.config.js"
     ],
-    "version": "1.0.7",
+    "version": "1.1.0",
     "main": "./dist/purplefox-tools.umd.js",
     "module": "./dist/purplefox-tools.es.js",
     "scripts": {

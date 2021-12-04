@@ -1,6 +1,10 @@
 <template>
     <teleport to="body">
-        <transition-group tag="div" name="list" class="fixed w-2/3 space-y-2 transition-all sm:w-1/4 bottom-2 left-2">
+        <transition-group
+            tag="div"
+            name="pf-list"
+            class="fixed w-2/3 space-y-2 transition-all sm:w-1/4 bottom-2 left-2"
+        >
             <div
                 v-for="notif in $notif.list"
                 :key="notif.id"

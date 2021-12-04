@@ -1,0 +1,10 @@
+.title {
+    @apply text-purple text-2xl mb-4 text-center font-semibold;
+    &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 33%;
+        @apply bg-orange m-auto mt-1;
+    }
+}

@@ -1,0 +1,102 @@
+.pf-btn {
+    @apply px-2 py-3 rounded text-white transition-colors box-border border border-transparent outline-none;
+
+    &.-primary {
+        @apply bg-purple;
+        &:hover {
+            @apply bg-purple-700;
+        }
+        &:active,
+        &:focus {
+            @apply bg-transparent border-purple text-purple;
+        }
+        &:disabled {
+            @apply bg-purple-200 text-gray-100 cursor-not-allowed;
+        }
+    }
+
+    &.-secondary {
+        @apply text-purple underline;
+        &:hover {
+            @apply text-purple-700;
+        }
+        &:active,
+        &:focus {
+            @apply border-purple border-dashed;
+        }
+        &:disabled {
+            @apply text-purple-200 cursor-not-allowed;
+        }
+    }
+
+    &.-warn {
+        @apply bg-red;
+        &:hover {
+            @apply bg-red-dark;
+        }
+        &:active,
+        &:focus {
+            @apply bg-transparent border-red text-red;
+        }
+        &:disabled {
+            @apply bg-gray-200 text-gray-100 cursor-not-allowed;
+        }
+    }
+}
+
+.pf-icon-btn {
+    @apply p-1 rounded transition-colors box-border border border-transparent outline-none text-base;
+
+    &.-primary {
+        @apply text-purple;
+        &:hover {
+            @apply text-purple-700;
+        }
+        &:active,
+        &:focus {
+            @apply bg-purple text-white;
+        }
+        &:disabled {
+            @apply text-purple-200 cursor-not-allowed;
+        }
+    }
+    &.-on-primary {
+        @apply text-white;
+        &:hover {
+            @apply text-orange;
+        }
+        &:active,
+        &:focus {
+            @apply bg-orange text-white;
+        }
+        &:disabled {
+            @apply text-gray-200 cursor-not-allowed;
+        }
+    }
+    &.-success {
+        @apply text-white bg-green;
+        &:hover {
+            @apply bg-green-dark;
+        }
+        &:active,
+        &:focus {
+            @apply bg-transparent text-green border-green;
+        }
+        &:disabled {
+            @apply opacity-5;
+        }
+    }
+    &.-danger {
+        @apply text-white bg-red;
+        &:hover {
+            @apply bg-red-dark;
+        }
+        &:active,
+        &:focus {
+            @apply bg-transparent text-red border-red;
+        }
+        &:disabled {
+            @apply opacity-5;
+        }
+    }
+}
