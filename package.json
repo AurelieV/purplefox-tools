@@ -3,7 +3,7 @@
     "files": [
         "dist"
     ],
-    "version": "1.0.2",
+    "version": "1.0.4",
     "main": "./dist/purplefox-tools.umd.js",
     "module": "./dist/purplefox-tools.es.js",
     "scripts": {
@@ -18,6 +18,9 @@
         },
         "./style.css": {
             "import": "./dist/style.css"
+        },
+        "./tailwind.config.js": {
+            "import": "./tailwind.config.js"
         }
     },
     "devDependencies": {

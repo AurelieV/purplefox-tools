@@ -6,11 +6,11 @@ export function useModal(id) {
     const route = useRoute();
     const router = useRouter();
 
-    const isOpened = computed(() => {
+    const isOpen = computed(() => {
         return !!route.query[id];
     });
     watch(
-        isOpened,
+        isOpen,
         (value) => {
             if (value) {
                 document.body.classList.add("overflow-hidden");
@@ -22,15 +22,14 @@ export function useModal(id) {
     );
 
     return {
-        isOpened,
-        isOpen: isOpened,
+        isOpen,
         open() {
             const query = { ...route.query, [id]: "open" };
             router.push({ query });
         },
         async close() {
             const hasChanged = new Promise((resolve) => {
-                const unsubscribe = watch(isOpened, (val) => {
+                const unsubscribe = watch(isOpen, (val) => {
                     if (!val) {
                         resolve();
                         unsubscribe();
