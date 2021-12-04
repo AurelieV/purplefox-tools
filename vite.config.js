@@ -11,7 +11,7 @@ module.exports = defineConfig({
             fileName: (format) => `purplefox-tools.${format}.js`,
         },
         rollupOptions: {
-            external: ["vue", "vue-router", "@iconify/vue"],
+            external: ["vue", "vue-router"],
             output: {
                 globals: {
                     vue: "Vue",

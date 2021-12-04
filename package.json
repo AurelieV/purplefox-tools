@@ -4,7 +4,7 @@
         "dist",
         "tailwind.config.js"
     ],
-    "version": "1.0.6",
+    "version": "1.0.7",
     "main": "./dist/purplefox-tools.umd.js",
     "module": "./dist/purplefox-tools.es.js",
     "scripts": {
@@ -21,7 +21,6 @@
         "./tailwind": "./tailwind.config.js"
     },
     "devDependencies": {
-        "@iconify/vue": "^3.0.0",
         "@vitejs/plugin-vue": "^1.9.3",
         "vite": "^2.6.4",
         "vue": "^3.2.16",
@@ -35,10 +34,10 @@
         "tailwindcss": "^2.2.17"
     },
     "dependencies": {
+        "@iconify/vue": "^3.0.0",
         "uuid": "^8.3.2"
     },
     "peerDependencies": {
-        "@iconify/vue": "^3.0.0",
         "vue": "^3.2.16"
     }
 }
