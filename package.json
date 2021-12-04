@@ -3,7 +3,7 @@
     "files": [
         "dist"
     ],
-    "version": "1.0.4",
+    "version": "1.0.5",
     "main": "./dist/purplefox-tools.umd.js",
     "module": "./dist/purplefox-tools.es.js",
     "scripts": {
@@ -16,12 +16,8 @@
             "import": "./dist/purplefox-tools.es.js",
             "require": "./dist/purplefox-tools.umd.js"
         },
-        "./style.css": {
-            "import": "./dist/style.css"
-        },
-        "./tailwind.config.js": {
-            "import": "./tailwind.config.js"
-        }
+        "./style.css": "./dist/style.css",
+        "./tailwind.config.js": "./tailwind.config.js"
     },
     "devDependencies": {
         "@iconify/vue": "^3.0.0",
