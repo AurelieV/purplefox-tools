@@ -1,10 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-    purge: {
-        content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-    },
-    darkMode: false, // or 'media' or 'class'
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
     theme: {
         colors: {
             transparent: "transparent",
@@ -43,7 +40,7 @@ module.exports = {
                 900: "#1F1C22",
             },
             white: colors.white,
-            green: { DEFAULT: colors.green["600"], dark: colors.green["800"] },
+            green: { DEFAULT: colors.emerald["600"], dark: colors.emerald["800"] },
             red: { DEFAULT: colors.red["600"], dark: colors.red["800"] },
         },
     },

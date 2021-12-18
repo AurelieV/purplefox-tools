@@ -4,7 +4,7 @@
         "dist",
         "tailwind.config.js"
     ],
-    "version": "1.1.0",
+    "version": "1.2.0",
     "main": "./dist/purplefox-tools.umd.js",
     "module": "./dist/purplefox-tools.es.js",
     "scripts": {
@@ -22,16 +22,16 @@
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^1.9.3",
-        "vite": "^2.6.4",
-        "vue": "^3.2.16",
+        "autoprefixer": "^10.4.0",
         "eslint": "^8.0.1",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-vue": "^7.20.0",
-        "autoprefixer": "^10.3.7",
-        "postcss": "^8.3.11",
+        "postcss": "^8.4.5",
         "postcss-import": "^14.0.2",
         "prettier": "2.4.1",
-        "tailwindcss": "^2.2.17"
+        "tailwindcss": "^3.0.7",
+        "vite": "^2.6.4",
+        "vue": "^3.2.16"
     },
     "dependencies": {
         "@iconify/vue": "^3.0.0",
