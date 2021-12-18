@@ -3,3 +3,9 @@
     opacity: 0;
     transform: translateY(-30px);
 }
+
+.pf-expand-enter-active,
+.pf-expand-leave-active {
+    will-change: height;
+    transition: height 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
