@@ -1,0 +1,3 @@
+.pf-link {
+    @apply text-purple font-bold hover:underline;
+}
