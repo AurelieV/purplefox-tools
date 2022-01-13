@@ -16,6 +16,11 @@
                         <Pf_Icon inline icon="mdi:github" class="mr-1" />GitHub
                     </a>
                 </li>
+                <li>
+                    <a class="flex items-center pf-link" href="https://bit.ly/3rim6R5"
+                        ><Pf_Icon inline icon="mdi:discord" class="mr-1" />Discord</a
+                    >
+                </li>
             </ul>
         </nav>
     </footer>
