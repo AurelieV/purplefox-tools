@@ -15,6 +15,20 @@
         }
     }
 
+    &.-on-primary {
+        @apply text-white underline;
+        &:hover {
+            @apply text-orange;
+        }
+        &:active,
+        &:focus {
+            @apply bg-orange text-white;
+        }
+        &:disabled {
+            @apply text-gray-200 cursor-not-allowed;
+        }
+    }
+
     &.-secondary {
         @apply text-purple underline;
         &:hover {
