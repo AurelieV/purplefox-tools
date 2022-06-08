@@ -38,3 +38,14 @@ export default function install(app) {
     });
     app.component("Pf_TheNotifications", TheNotifications);
 }
+
+export function useNotification() {
+    return reactive({
+        list: notifications,
+        push: pushNotification,
+        error,
+        warn,
+        info,
+        success,
+    });
+}
