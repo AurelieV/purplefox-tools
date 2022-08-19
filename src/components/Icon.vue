@@ -1,6 +1,6 @@
 <template>
     <!-- We need an additional span to handle SSR. Maybe punish later for it -->
-    <span>
+    <span class="flex items-center justify-center">
         <Icon v-bind="$attrs"></Icon>
     </span>
 </template>
