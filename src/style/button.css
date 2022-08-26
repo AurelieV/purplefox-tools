@@ -3,10 +3,10 @@
 
     &.-primary {
         @apply bg-purple;
-        &:hover {
+        &:hover,
+        &:active {
             @apply bg-purple-700;
         }
-        &:active,
         &:focus {
             @apply bg-transparent border-purple text-purple;
         }
@@ -17,10 +17,10 @@
 
     &.-on-primary {
         @apply text-white underline;
-        &:hover {
+        &:hover,
+        &:active {
             @apply text-orange;
         }
-        &:active,
         &:focus {
             @apply bg-orange text-white;
         }
@@ -31,10 +31,10 @@
 
     &.-secondary {
         @apply text-purple underline;
-        &:hover {
+        &:hover,
+        &:active {
             @apply text-purple-700;
         }
-        &:active,
         &:focus {
             @apply border-purple border-dashed;
         }
@@ -45,10 +45,10 @@
 
     &.-warn {
         @apply bg-red;
-        &:hover {
+        &:hover,
+        &:active {
             @apply bg-red-dark;
         }
-        &:active,
         &:focus {
             @apply bg-transparent border-red text-red;
         }
@@ -63,10 +63,10 @@
 
     &.-primary {
         @apply text-purple;
-        &:hover {
+        &:hover,
+        &:active {
             @apply text-purple-700;
         }
-        &:active,
         &:focus {
             @apply bg-purple text-white;
         }
@@ -76,10 +76,10 @@
     }
     &.-on-primary {
         @apply text-white;
-        &:hover {
+        &:hover,
+        &:active {
             @apply text-orange;
         }
-        &:active,
         &:focus {
             @apply bg-orange text-white;
         }
@@ -89,10 +89,10 @@
     }
     &.-success {
         @apply text-white bg-green;
-        &:hover {
+        &:hover,
+        &:active {
             @apply bg-green-dark;
         }
-        &:active,
         &:focus {
             @apply bg-transparent text-green border-green;
         }
@@ -102,10 +102,10 @@
     }
     &.-danger {
         @apply text-white bg-red;
-        &:hover {
+        &:hover,
+        &:active {
             @apply bg-red-dark;
         }
-        &:active,
         &:focus {
             @apply bg-transparent text-red border-red;
         }
