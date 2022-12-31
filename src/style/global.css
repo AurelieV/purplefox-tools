@@ -2,3 +2,18 @@ body {
     @apply bg-gray-100 text-gray-900 text-base;
     font-family: "Roboto Mono", sans-serif;
 }
+
+.pf-scroll {
+    &::-webkit-scrollbar-thumb {
+        background-color: theme(colors.purple.DEFAULT);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: transparent;
+    }
+}
