@@ -1,8 +1,10 @@
 import { useRoute, useRouter } from "vue-router";
-import { computed, watch } from "vue";
+import { computed, watch, onScopeDispose } from "vue";
 import Dialog from "/src/components/Dialog.vue";
 
-export function useModal(id) {
+const groups = {};
+
+export function useModal(id, groupId) {
     const route = useRoute();
     const router = useRouter();
 
@@ -21,26 +23,42 @@ export function useModal(id) {
         { immediate: true }
     );
 
+    async function close() {
+        const hasChanged = new Promise((resolve) => {
+            const unsubscribe = watch(isOpen, (val) => {
+                if (!val) {
+                    resolve();
+                    unsubscribe();
+                }
+            });
+        });
+        const query = { ...route.query };
+        delete query[id];
+        router.replace({ query });
+        return hasChanged;
+    }
+
+    if (groupId) {
+        if (!groups[groupId]) {
+            groups[groupId] = [];
+        }
+        groups[groupId].push({ id, fn: close });
+        onScopeDispose(() => {
+            groups[groupId] = groups[groupId].filter((modal) => modal.id !== id);
+        });
+    }
+
     return {
         isOpen,
-        open() {
+        async open() {
+            if (groupId) {
+                // First close all other modals from this group
+                await Promise.all(groups[groupId].filter((modal) => modal.id !== id).map(({ fn }) => fn()));
+            }
             const query = { ...route.query, [id]: "open" };
             router.push({ query });
         },
-        async close() {
-            const hasChanged = new Promise((resolve) => {
-                const unsubscribe = watch(isOpen, (val) => {
-                    if (!val) {
-                        resolve();
-                        unsubscribe();
-                    }
-                });
-            });
-            const query = { ...route.query };
-            delete query[id];
-            router.replace({ query });
-            return hasChanged;
-        },
+        close,
     };
 }
 

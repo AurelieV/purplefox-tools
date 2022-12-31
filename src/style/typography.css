@@ -1,3 +1,4 @@
-.title {
+.title,
+.-pf-title {
     @apply text-purple text-2xl mb-4 text-center font-semibold underline decoration-orange;
 }

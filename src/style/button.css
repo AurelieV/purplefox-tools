@@ -1,5 +1,8 @@
 .pf-btn {
     @apply px-2 py-3 rounded text-white transition-colors box-border border border-transparent outline-none;
+    display: flex;
+    justify-content: center;
+    @apply items-center;
 
     &.-primary {
         @apply bg-purple;
@@ -55,6 +58,9 @@
         &:disabled {
             @apply bg-gray-200 text-gray-100 cursor-not-allowed;
         }
+    }
+    &.-small {
+        @apply text-xs px-1 py-1;
     }
 }
 
@@ -112,5 +118,24 @@
         &:disabled {
             @apply opacity-5;
         }
+    }
+    .-square {
+        aspect-ratio: 1;
+        padding: 0.5rem;
+    }
+}
+
+.pf-scroll {
+    &::-webkit-scrollbar-thumb {
+        background-color: theme(colors.purple.DEFAULT);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: transparent;
     }
 }
