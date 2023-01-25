@@ -8,8 +8,8 @@
             class="px-3 py-2 transition-colors border rounded cursor-pointer border-purple"
             :class="[
                 option.value === modelValue
-                    ? 'text-purple hover:bg-purple-700 focus:bg-purple-700'
-                    : 'bg-purple text-white',
+                    ? 'bg-purple text-white'
+                    : 'text-purple hover:bg-purple-700 hover:text-white focus:bg-purple-700 focus:text-white',
                 { 'flex-1': fluid },
             ]"
             @click="$emit('update:modelValue', option.value)"
