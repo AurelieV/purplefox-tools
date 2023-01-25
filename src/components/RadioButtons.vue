@@ -1,12 +1,17 @@
 <template>
-    <div role="radiogroup" class="flex justify-center mt-3">
+    <div role="radiogroup" class="flex text-center" :class="vertical ? 'flex-col space-y-2' : 'space-x-2'">
         <div
             v-for="option in options"
             :key="option.label"
             role="radio"
             :aria-selected="option.value === modelValue"
             class="px-3 py-2 transition-colors border rounded cursor-pointer border-purple"
-            :class="option.value === modelValue ? 'text-purple' : 'bg-purple text-white'"
+            :class="[
+                option.value === modelValue
+                    ? 'text-purple hover:bg-purple-700 focus:bg-purple-700'
+                    : 'bg-purple text-white',
+                { 'flex-1': fluid },
+            ]"
             @click="$emit('update:modelValue', option.value)"
         >
             {{ option.label }}
@@ -20,6 +25,8 @@ export default {
         options: { type: Array, required: true },
         // eslint-disable-next-line vue/require-prop-types
         modelValue: { required: true },
+        vertical: { type: Boolean, default: false },
+        fluid: { type: Boolean, default: false },
     },
     emits: ["update:modelValue"],
 };
